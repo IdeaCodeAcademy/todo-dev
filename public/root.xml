@@ -1,5 +1,11 @@
 <templates>
-  <t t-name="Root">
-    <div>hello owl</div>
-  </t>
+    <t t-name="Root">
+        <Navbar appName="'ICA'" apps="apps" mainScreen="state.mainScreen"
+                switchScreen.bind="switchScreen"/>
+        <div class="container mt-2">
+<!--          <TodoList/>-->
+<!--          <SaleOrder/>-->
+          <t t-component="getComponent()"/>
+        </div>
+    </t>
 </templates>

@@ -1,0 +1,23 @@
+<templates>
+    <t t-name="TodoList">
+        <div class="container mt-5 mb-5">
+            <input type="text" placeholder="Add Task..." class="form-control" t-on-keyup="(e)=>this.addTask(e)"/>
+        </div>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <t t-foreach="store.todos" t-as="todo" t-key="todo.id">
+                    <TodoItem todo="todo"/>
+<!--                    <TodoItem todo="todo" toggleTodo.bind="toggleTodo" deleteTask.bind="deleteTask"/>-->
+<!--                    <TodoItem todo="todo" toggleTodo="(e)=>this.toggleTodo(e)"/>-->
+                </t>
+            </tbody>
+        </table>
+    </t>
+</templates>

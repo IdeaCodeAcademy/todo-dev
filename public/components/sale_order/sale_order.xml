@@ -1,0 +1,5 @@
+<templates>
+    <t t-name="SaleOrder">
+        <h1>Hello Sale Order</h1>
+    </t>
+</templates>
